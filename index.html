@@ -23,5 +23,21 @@
         <textarea id="text2_out" placeholder="Output2"></textarea>
         <button id="btn_down">DOWNLOAD</button>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let text1 = document.querySelector("#text1").value;
+            let text2 = document.querySelector("#text2").value;
+
+
+        });
+
+        function cleanUp(text) {
+            text = text.replace(/(\r\n|\n|\r)/gm, " "); //replace all new lines with spaces
+            text = text.replace(/()/gm, "\n-"); //replace all special bullets to -
+            text = text.replace(/?/gm, "'") //replace french apostrophe into regular one
+            return text;
+        }
+    </script>
 </body>
 </html>
